@@ -57,7 +57,7 @@ class CVEScanner:
                 elif repo == "UA Infra":
                     repo = const.UA_INFRA
                 affected_cves.append(
-                    ScanResult(cve_id, uct_record["priority"], vb[0], vb[1], repo)
+                    ScanResult(cve_id, uct_record["priority"][0], vb[0], vb[1], repo)
                 )
 
         return affected_cves
